@@ -8,11 +8,9 @@ import '../index.css'
 
 const Form = props => {
     
-    // const { post, setPost } = props
+    const { addNewUser } = props
 
     const [post, setPost] = useState([])
-
-    console.log(setPost)
 
     const initialFormState = {
         name: '',
@@ -77,6 +75,8 @@ const Form = props => {
             })
 
             setServerError(null)
+
+            addNewUser(response.data)
             })
             .catch(err => {
                 setServerError("There is a server error!")
