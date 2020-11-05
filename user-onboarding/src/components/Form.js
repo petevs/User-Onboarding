@@ -111,6 +111,7 @@ const Form = props => {
 
             <Label htmlFor='email' >Email</Label>
             <Input 
+                id='email'
                 type='text' 
                 name='email' 
                 onChange={inputChange} 
@@ -120,6 +121,7 @@ const Form = props => {
 
             <Label htmlFor='password' >Password</Label>
             <Input 
+                id='password'
                 type='password' 
                 name='password' 
                 onChange={inputChange} 
@@ -129,6 +131,7 @@ const Form = props => {
 
             <Label htmlFor='terms' >Terms of Service</Label>
             <Checkbox className='checky'
+                id='terms'
                 type='checkbox' 
                 name='terms'
                 checked={formState.terms} 
@@ -136,7 +139,7 @@ const Form = props => {
             
             
 
-            <Button disabled={isButtonDisabled} type="submit">Submit</Button>
+            <Button id="submit" disabled={isButtonDisabled} type="submit">Submit</Button>
 
         </FormDiv>)
 }
